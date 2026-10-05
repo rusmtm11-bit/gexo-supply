@@ -1,0 +1,649 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light theme */
+  --bg-dark: #F8FAFE;
+  --bg-elevated: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --accent-gold: #F39C12;
+  --accent-gold-dark: #E67E22;
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .logo, .nav-links a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Header */
+header {
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logo-image {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.logo-slogan {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  font-size: 1rem;
+  position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent-gold);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent-gold);
+  color: white;
+  border: 2px solid var(--accent-gold);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--accent-gold);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Hero section */
+.hero {
+  padding: 80px 0 100px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F2F4F8 100%);
+}
+
+.hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1.2;
+}
+
+.hero-badge {
+  background: rgba(243, 156, 18, 0.12);
+  color: var(--accent-gold);
+  font-weight: 600;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 40px;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+
+.hero h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+.stat span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.hero-image {
+  flex: 0.9;
+  background: radial-gradient(circle at 30% 20%, rgba(243,156,18,0.08) 0%, rgba(0,0,0,0.02) 80%);
+  padding: 20px;
+  border-radius: 40px;
+  text-align: center;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+/* Cards */
+.services-grid, .products-grid, .values-grid, .why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card, .product-card, .value-card {
+  background: var(--bg-card);
+  padding: 32px 24px;
+  border-radius: 24px;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card:hover, .product-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+}
+
+.service-card h3, .product-card h3, .value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.service-card p, .product-card p, .value-card p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.why-item {
+  text-align: center;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.why-item:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-5px);
+}
+
+.why-item i {
+  font-size: 2.2rem;
+  color: var(--accent-gold);
+  margin-bottom: 15px;
+}
+
+.why-item h4 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Contact form */
+.contact-form {
+  background: var(--bg-elevated);
+  border-radius: 32px;
+  padding: 48px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 60px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  transition: 0.2s;
+}
+
+textarea {
+  border-radius: 24px;
+  resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-color);
+  padding: 50px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--accent-gold);
+}
+
+.footer-grid p, .footer-grid li {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.footer-grid a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-grid a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-grid ul {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.footer-grid li {
+  margin-bottom: 8px;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 24px;
+  }
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: var(--bg-elevated);
+    width: 80%;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    padding: 40px 32px;
+    gap: 28px;
+    z-index: 999;
+    transition: 0.3s;
+    border-right: 1px solid var(--border-color);
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero-grid {
+    flex-direction: column;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  .logo-slogan {
+    font-size: 0.55rem;
+  }
+  .logo-image {
+    height: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .contact-form {
+    padding: 28px;
+  }
+}
+.section {
+  transition: background-image 0.4s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================================ */
+/* Home page specific styles (index.html)        */
+/* Hero video background, logo in hero, and the   */
+/* image-on-hover effect for service/why/product   */
+/* cards. Kept here (not inline) so the logo and   */
+/* shared rules above stay identical across all    */
+/* pages of the site.                              */
+/* ============================================ */
+
+.hero-logo {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(243, 156, 18, 0.3));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 30px rgba(243, 156, 18, 0.5));
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-width: 200px;
+  }
+}
+
+/* Hero video background (home page only) */
+.hero.hero-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero.hero-video .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* On the home page the hero sits over a video, so text needs to switch to white.
+   Other pages keep the default hero background and default (dark) text colors
+   defined earlier in this file. */
+.hero.hero-video h1,
+.hero.hero-video .stat h3,
+.hero.hero-video .stat span,
+.hero.hero-video p,
+.hero.hero-video .hero-badge {
+  color: #fff !important;
+}
+
+.hero.hero-video p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.hero.hero-video .hero-badge {
+  background: rgba(243, 156, 18, 0.25) !important;
+}
+
+.hero.hero-video .hero-stats .stat span {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.hero.hero-video .hero-image {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.hero.hero-video .btn-primary {
+  background: var(--accent-gold);
+  color: #1A202C;
+  border-color: var(--accent-gold);
+}
+
+.hero.hero-video .btn-primary:hover {
+  background: transparent;
+  color: var(--accent-gold);
+}
+
+/* Image-on-hover background effect for service / why / product cards (home page) */
+.section.hover-bg-active {
+  position: relative;
+}
+
+.section.hover-bg-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section.hover-bg-active .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section.hover-bg-active .section-title,
+.section.hover-bg-active .section-sub,
+.section.hover-bg-active .service-card h3,
+.section.hover-bg-active .service-card p,
+.section.hover-bg-active .why-item h4,
+.section.hover-bg-active .why-item p,
+.section.hover-bg-active .product-card h3,
+.section.hover-bg-active .product-card p {
+  color: #fff !important;
+}
+
+.section.hover-bg-active .service-icon,
+.section.hover-bg-active .why-item i,
+.section.hover-bg-active .product-card .service-icon {
+  color: var(--accent-gold) !important;
+}
+
+.section.hover-bg-active .service-card,
+.section.hover-bg-active .why-item,
+.section.hover-bg-active .product-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.section.hover-bg-active .btn-outline {
+  border-color: white;
+  color: white;
+}
+
+.section.hover-bg-active .btn-outline:hover {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #1A202C;
+}

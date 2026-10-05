@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"><link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<title>GEXO Supply and Trading Limited | Global General Trading</title>
+<meta name="description" content="GEXO Supply and Trading Limited – Hong Kong based international general trading company providing sourcing, procurement, logistics, and distribution worldwide. Smarter trade, simpler supply.">
+<meta name="keywords" content="general trading, sourcing, procurement, logistics, Hong Kong trading, industrial goods">
+<link rel="canonical" href="https://gexo-supply.com/">
+
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gexo-supply.com/">
+<meta property="og:title" content="GEXO Supply and Trading Limited | Global General Trading">
+<meta property="og:description" content="Hong Kong based international general trading company providing sourcing, procurement, logistics, and distribution worldwide. Smarter trade, simpler supply.">
+<meta property="og:image" content="https://gexo-supply.com/images/og-image.png">
+<meta property="og:site_name" content="GEXO Supply and Trading Limited">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GEXO Supply and Trading Limited | Global General Trading">
+<meta name="twitter:description" content="Hong Kong based international general trading company providing sourcing, procurement, logistics, and distribution worldwide.">
+<meta name="twitter:image" content="https://gexo-supply.com/images/og-image.png">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- Structured data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GEXO Supply and Trading Limited",
+  "url": "https://gexo-supply.com/",
+  "logo": "https://gexo-supply.com/images/logo.png",
+  "description": "Hong Kong based international general trading company providing sourcing, procurement, logistics, and distribution worldwide.",
+  "email": "info@gexo-supply.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "RM A09, Unit F3, 2/F, Koon Wo Industrial Building, Nos. 63-75 Ta Chuen Ping Street",
+    "addressLocality": "Kwai Chung",
+    "addressRegion": "New Territories",
+    "addressCountry": "HK"
+  },
+  "sameAs": []
+}
+</script>
+
+<style>
+.logo-image {
+height: 55px;
+width: auto;
+max-width: 220px;
+}
+
+.hero-logo {
+max-width: 280px;
+width: 100%;
+margin: 0 auto;
+display: block;
+filter: drop-shadow(0 0 20px rgba(243, 156, 18, 0.3));
+transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero-logo:hover {
+transform: scale(1.02);
+filter: drop-shadow(0 0 30px rgba(243, 156, 18, 0.5));
+}
+
+@media (max-width: 768px) {
+.hero-logo {
+max-width: 200px;
+}
+
+.logo-image {
+height: 48px;
+}
+}
+
+/* Hero video */
+.hero {
+position: relative;
+background: none;
+overflow: hidden;
+padding: 80px 0 100px;
+}
+
+.hero-video-bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 0;
+}
+
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.55);
+z-index: 1;
+}
+
+.hero .container {
+position: relative;
+z-index: 2;
+}
+
+.hero h1, .hero .stat h3, .hero .stat span, .hero p, .hero-badge {
+color: #fff !important;
+}
+
+.hero p {
+color: rgba(255,255,255,0.85) !important;
+}
+
+.hero-badge {
+background: rgba(243,156,18,0.25) !important;
+}
+
+.hero-stats .stat span {
+color: rgba(255,255,255,0.8) !important;
+}
+
+.hero-image {
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(2px);
+border-radius: 40px;
+padding: 20px;
+}
+
+.btn-primary {
+background: var(--accent-gold);
+color: #1A202C;
+border-color: var(--accent-gold);
+}
+
+.btn-primary:hover {
+background: transparent;
+color: var(--accent-gold);
+}
+
+/* Smooth background transition for sections */
+.section {
+transition: background-image 0.4s ease-in-out;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+}
+
+/* Overlay for better text readability when hover background is active */
+.section.hover-bg-active {
+position: relative;
+}
+
+.section.hover-bg-active::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.65);
+z-index: 1;
+pointer-events: none;
+}
+
+.section.hover-bg-active .container {
+position: relative;
+z-index: 2;
+}
+
+/* Make text and icons white when hover background is active */
+.section.hover-bg-active .section-title,
+.section.hover-bg-active .section-sub,
+.section.hover-bg-active .service-card h3,
+.section.hover-bg-active .service-card p,
+.section.hover-bg-active .why-item h4,
+.section.hover-bg-active .why-item p,
+.section.hover-bg-active .product-card h3,
+.section.hover-bg-active .product-card p,
+.section.hover-bg-active .service-icon,
+.section.hover-bg-active .why-item i,
+.section.hover-bg-active .product-card .service-icon {
+color: #fff !important;
+}
+
+/* Keep gold icons and buttons gold */
+.section.hover-bg-active .service-icon,
+.section.hover-bg-active .why-item i,
+.section.hover-bg-active .product-card .service-icon {
+color: var(--accent-gold) !important;
+}
+
+/* Adjust card backgrounds to be slightly transparent on hover */
+.section.hover-bg-active .service-card,
+.section.hover-bg-active .why-item,
+.section.hover-bg-active .product-card {
+background: rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(1px);
+border-color: rgba(255,255,255,0.2);
+}
+
+.section.hover-bg-active .btn-outline {
+border-color: white;
+color: white;
+}
+
+.section.hover-bg-active .btn-outline:hover {
+background: var(--accent-gold);
+border-color: var(--accent-gold);
+color: #1A202C;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container navbar">
+<a href="index.html" class="logo">
+<img src="images/logo.png" alt="GEXO Supply and Trading Limited Logo" class="logo-image">
+<div class="logo-text-wrapper">
+<span class="logo-text">GEXO</span>
+<span class="logo-slogan">Smarter trade, simpler supply</span>
+</div>
+</a>
+<div class="menu-toggle" id="mobile-menu" role="button" aria-label="Toggle navigation menu" tabindex="0"><i class="fas fa-bars"></i></div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</header>
+<main>
+<section class="hero">
+<video autoplay muted loop playsinline class="hero-video-bg" id="bgVideo" aria-hidden="true" poster="images/logo.png">
+<source src="images/bridge-terminal-architecture-23544.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+<div class="container hero-grid">
+<div class="hero-content fade-up">
+<span class="hero-badge"><i class="fas fa-globe-asia"></i> Global Trade Partner</span>
+<h1>Bridging markets,<br> delivering <span style="color: var(--accent-gold);">trust</span> worldwide</h1>
+<p>GEXO Supply and Trading Limited – Your reliable Hong Kong based general trading company offering sourcing, procurement, logistics and supply chain solutions for industrial, commercial and consumer sectors.</p>
+<a href="contact.html" class="btn btn-primary">Request a quote <i class="fas fa-arrow-right"></i></a>
+<div class="hero-stats">
+<div class="stat"><h3 data-counter="15" data-suffix="+">0+</h3><span>Global markets</span></div>
+<div class="stat"><h3 data-counter="200" data-suffix="+">0+</h3><span>Trusted partners</span></div>
+<div class="stat"><h3 data-counter="100" data-suffix="%">0%</h3><span>Compliance focus</span></div>
+</div>
+</div>
+<div class="hero-image fade-up">
+<img src="images/logo.png" alt="GEXO Supply and Trading Limited Brand Logo" class="hero-logo">
+</div>
+</div>
+</section>
+<section class="section" id="section-services" data-original-bg="var(--bg-dark)">
+<div class="container">
+<h2 class="section-title fade-up">Integrated trade solutions</h2>
+<p class="section-sub fade-up">From strategic sourcing to final delivery, we enable seamless international transactions.</p>
+<div class="services-grid">
+<div class="service-card fade-up" data-hover-bg="url('images/bg-sourcing.jpg')"><i class="fas fa-search service-icon"></i><h3>Sourcing & Procurement</h3><p>We identify vetted suppliers, negotiate competitive pricing and manage procurement cycles according to client needs.</p></div>
+<div class="service-card fade-up" data-hover-bg="url('images/bg-trading.jpg')"><i class="fas fa-exchange-alt service-icon"></i><h3>General Trading</h3><p>Industrial, commercial and consumer goods — cross-border transactions with full compliance and documentation support.</p></div>
+<div class="service-card fade-up" data-hover-bg="url('images/bg-logistics.jpg')"><i class="fas fa-truck service-icon"></i><h3>Logistics & Distribution</h3><p>End-to-end coordination, freight forwarding, warehousing and last-mile delivery planning.</p></div>
+<div class="service-card fade-up" data-hover-bg="url('images/bg-compliance.jpg')"><i class="fas fa-clipboard-list service-icon"></i><h3>Quality & Compliance</h3><p>Supplier verification, product documentation, and trade compliance to safeguard your supply chain.</p></div>
+</div>
+</div>
+</section>
+<section class="section" id="section-why" data-original-bg="var(--bg-elevated)">
+<div class="container">
+<h2 class="section-title fade-up">Why global businesses trust GEXO</h2>
+<p class="section-sub fade-up">We combine local expertise with international reach, delivering consistency and accountability.</p>
+<div class="why-grid">
+<div class="why-item fade-up" data-hover-bg="url('images/bg-reliability.jpg')"><i class="fas fa-handshake"></i><h4>Reliability First</h4><p>Long-term partnerships built on transparent communication and on-time delivery.</p></div>
+<div class="why-item fade-up" data-hover-bg="url('images/bg-intelligence.jpg')"><i class="fas fa-chart-line"></i><h4>Market Intelligence</h4><p>Real-time insights on pricing, logistics and regulatory shifts across Asia, Europe & Americas.</p></div>
+<div class="why-item fade-up" data-hover-bg="url('images/bg-mitigation.jpg')"><i class="fas fa-shield-alt"></i><h4>Risk Mitigation</h4><p>Comprehensive due diligence, compliance checks and quality assurance protocols.</p></div>
+<div class="why-item fade-up" data-hover-bg="url('images/bg-network.jpg')"><i class="fas fa-globe"></i><h4>Global Network</h4><p>Strategic partnerships with manufacturers, logistics hubs and inspection agencies worldwide.</p></div>
+</div>
+</div>
+</section>
+<section class="section" id="section-products" data-original-bg="var(--bg-dark)">
+<div class="container">
+<h2 class="section-title fade-up">Products we supply</h2>
+<p class="section-sub fade-up">Flexible sourcing across diverse categories — tailored to your business demands.</p>
+<div class="products-grid">
+<div class="product-card fade-up" data-hover-bg="url('images/bg-industrial.jpg')"><i class="fas fa-industry service-icon"></i><h3>Industrial Materials</h3><p>Raw materials, construction inputs, and manufacturing supplies.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-chemicals.jpg')"><i class="fas fa-flask service-icon"></i><h3>Raw & Industrial Chemicals</h3><p>Chemical products for industrial and commercial use.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-machinery.jpg')"><i class="fas fa-cogs service-icon"></i><h3>Machinery & Equipment</h3><p>Equipment, machinery, parts, technical products.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-construction.jpg')"><i class="fas fa-hard-hat service-icon"></i><h3>Construction Materials</h3><p>Infrastructure and project supply materials.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-food.jpg')"><i class="fas fa-apple-alt service-icon"></i><h3>Food & Beverages</h3><p>Food products, beverages, ingredients for wholesale, retail, hospitality.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-electronics.jpg')"><i class="fas fa-microchip service-icon"></i><h3>Electronics & Components</h3><p>Electronic products, parts, components for commercial use.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-packaging.jpg')"><i class="fas fa-box-open service-icon"></i><h3>Packaging Materials</h3><p>Packaging products for trade, logistics, distribution.</p></div>
+<div class="product-card fade-up" data-hover-bg="url('images/bg-generaltrading.jpg')"><i class="fas fa-tag service-icon"></i><h3>General Trading Products</h3><p>Custom sourcing according to specific customer requirements.</p></div>
+</div>
+<div style="text-align: center; margin-top: 40px;"><a href="products.html" class="btn btn-outline">View full catalog <i class="fas fa-arrow-right"></i></a></div>
+</div>
+</section>
+<section class="section" id="section-cta" data-original-bg="linear-gradient(120deg, #F8FAFE 0%, #FFFFFF 100%)">
+<div class="container" style="text-align: center;">
+<h2 style="font-size: 2rem; color: var(--text-primary);">Ready to expand your supply chain?</h2>
+<p style="margin: 20px auto; max-width: 600px; color: var(--text-secondary);">Let's discuss how GEXO Supply and Trading Limited can empower your international trade objectives.</p>
+<a href="contact.html" class="btn btn-primary">Get in touch →</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-grid">
+<div>
+<div class="footer-logo">GEXO Supply &amp; Trading Ltd</div>
+<p>Hong Kong based international general trading company delivering sourcing, procurement, supply chain and distribution excellence since established. Smarter trade, simpler supply.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul>
+</div>
+<div>
+<h4>Contact Info</h4>
+<p><i class="fas fa-map-marker-alt"></i> RM A09, Unit F3, 2/F, Koon Wo Industrial Building, Nos. 63-75 Ta Chuen Ping Street, Kwai Chung, New Territories, Hong Kong</p>
+<p><i class="fas fa-envelope"></i> info@gexo-supply.com</p>
+</div>
+<div>
+<h4>Compliance Commitment</h4>
+<p>We adhere to international trade regulations, ethical sourcing and quality management standards.</p>
+</div>
+</div>
+<div class="container" style="border-top: 1px solid var(--border-color); margin-top: 40px; padding-top: 24px; text-align: center;">
+<p>© 2026 GEXO Supply and Trading Limited — Global General Trading & Procurement Experts</p>
+</div>
+</footer>
+<script src="script.js"></script>
+<script>
+(function() {
+var video = document.getElementById('bgVideo');
+if (video) {
+video.playbackRate = 0.58;
+}
+
+// Animated stat counters (15+, 200+, 100%) — count up when scrolled into view
+var counters = document.querySelectorAll('[data-counter]');
+if (counters.length && 'IntersectionObserver' in window) {
+  var animated = new WeakSet();
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting || animated.has(entry.target)) return;
+      animated.add(entry.target);
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-counter'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = 1200;
+      var startTime = null;
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.floor(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(function(el) { counterObserver.observe(el); });
+}
+
+var cards = document.querySelectorAll('.service-card, .why-item, .product-card');
+cards.forEach(function(card) {
+var section = card.closest('.section');
+if (!section) return;
+var originalBg = window.getComputedStyle(section).backgroundImage;
+if (originalBg && originalBg !== 'none') {
+section.dataset.originalBg = originalBg;
+} else {
+section.dataset.originalBg = '';
+}
+card.addEventListener('mouseenter', function() {
+var hoverBg = this.getAttribute('data-hover-bg');
+if (hoverBg && hoverBg !== 'url()') {
+section.style.backgroundImage = hoverBg;
+section.classList.add('hover-bg-active');
+}
+});
+card.addEventListener('mouseleave', function() {
+if (section.dataset.originalBg) {
+section.style.backgroundImage = section.dataset.originalBg;
+} else {
+section.style.backgroundImage = '';
+}
+section.classList.remove('hover-bg-active');
+});
+});
+})();
+</script>
+</body>
+</html>
