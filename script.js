@@ -24,10 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }, appearOptions);
   faders.forEach(fader => { appearOnScroll.observe(fader); });
 
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const norm = p => "/" + p.split("/").pop().replace(/\.html$/, "").replace(/^index$/, "");
+  const currentPath = norm(window.location.pathname);
   document.querySelectorAll('.nav-links a').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+    if (norm(href) === currentPath) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
