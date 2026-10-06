@@ -46,5 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     '<button type="button" aria-label="Close">&times;</button>';
   bar.querySelector('button').addEventListener('click', function () { bar.remove(); });
   document.body.insertBefore(bar, document.body.firstChild);
+  requestAnimationFrame(function () { if (window.scrollY < 120) window.scrollTo(0, 0); });
   history.replaceState(null, '', location.pathname + location.hash);
 })();
