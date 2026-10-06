@@ -647,3 +647,33 @@ footer {
   border-color: var(--accent-gold);
   color: #1A202C;
 }
+
+/* Rename notice for visitors coming from goods-hub.co */
+.rename-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 48px 10px 16px;
+  background: #232A4E;
+  color: #fff;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  text-align: center;
+  position: relative;
+  z-index: 1001;
+}
+.rename-notice strong { color: var(--accent-gold); font-weight: 700; }
+.rename-notice button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+}

@@ -34,3 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Visitors forwarded from the old goods-hub.co domain see a one-line rename notice.
+(function () {
+  if (!/[?&]from=goods-hub\b/.test(location.search)) return;
+  var bar = document.createElement('div');
+  bar.className = 'rename-notice';
+  bar.setAttribute('role', 'status');
+  bar.innerHTML = '<span><strong>Goods Hub Limited</strong> is now <strong>GEXO Supply and Trading Limited</strong>. Same services, new name.</span>' +
+    '<button type="button" aria-label="Close">&times;</button>';
+  bar.querySelector('button').addEventListener('click', function () { bar.remove(); });
+  document.body.insertBefore(bar, document.body.firstChild);
+  history.replaceState(null, '', location.pathname + location.hash);
+})();
